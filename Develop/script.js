@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 function getRandomNumber(min, max) {
   var randomNumber = Math.random(); // random 0 - 0.99
   var randomNumberUpToMax = randomNumber * max;
-  var randomNumberInRange = min + randomNumberUpToMax; 
+  var randomNumberInRange = min + randomNumberUpToMax;
   return Math.floor(randomNumberInRange); // removes decimals
 
 }
@@ -24,6 +24,9 @@ var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 function generatePassword() {
   var Password = ""
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+
   var numberOfCharacters = prompt("How many characters you want in the password?");
   console.log(numberOfCharacters)
   if (numberOfCharacters < 8) {
@@ -54,14 +57,12 @@ function generatePassword() {
   var includeNumbers = confirm("Do you want numbers in the password?")
   console.log(includeNumbers)
   if (includeNumbers) {
-    Password += getRandomValueFromArray (numbers)
+    Password += getRandomValueFromArray(numbers)
   }
 
-  for (var i = Password.length ; i < numberOfCharacters ; i++){
+  for (var i = Password.length; i <= numberOfCharacters; i++) {
     Password += getRandomValueFromArray(lowerCase)
-   
-    
-  } 
+  }
 
   return Password
 }
@@ -86,4 +87,4 @@ function writePassword() {
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); var numberOfCharacters = prompt("How many characters you want in the password?");
+generateBtn.addEventListener("click", writePassword); 

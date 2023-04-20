@@ -24,9 +24,6 @@ var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 function generatePassword() {
   var Password = ""
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-
   var numberOfCharacters = prompt("How many characters you want in the password?");
   console.log(numberOfCharacters)
   if (numberOfCharacters < 8) {

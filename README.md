@@ -6,7 +6,7 @@ Its a webpage where if you click the generate button, it will ask you some condi
 
 ## Installation
 
-The page to see the web is :
+The page to see the web is :https://hyonneo.github.io/challenge-3/
 
 ## Usage
 
